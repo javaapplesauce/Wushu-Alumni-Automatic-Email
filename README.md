@@ -8,9 +8,9 @@ A simple  script to send **personalized Gmail emails** to Columbia Wushu alumni 
 * Reads alumni contacts from a plaintext list such as:
 
   ```
-  Sunny Lai <sunnyxxlai@gmail.com>,
-  Frederic Francoeur <rff2111@columbia.edu>,
-  Caitlin Escudero <cdero14@gmail.com>,
+  Andrew Andrew <Andrew@gmail.com>,
+  Bobby Bobby <Bobby@columbia.edu>,
+  Caleb Caleb <caleb@gmail.com>,
   ```
 * Replaces `{{alumni_name}}` in the message body with each contact’s **first name**
 * Sends messages via Gmail SMTP, adding a short delay between emails to avoid spam filters
