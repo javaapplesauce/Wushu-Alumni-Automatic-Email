@@ -18,26 +18,12 @@ except ImportError:
 
 # ----------------------------- Config ---------------------------------
 
-DEFAULT_SUBJECT = "Support Columbia Wushu October 21st Columbia Giving Day"
+DEFAULT_SUBJECT = "TEMPLATE HERE: "
 
-TEMPLATE = """Hi {{alumni_name}},
+TEMPLATE = """
 
-I hope this email finds you well! My name is Richard Li, Columbia Wushu’s current Vice President. October 21st marks Columbia University’s annual Giving Day, and I’m reaching out on behalf of our team to kindly ask for your support. 
+YOUR EMAIL HERE
 
-Over the past year, our community has grown tremendously; not only in size, but also in the scope of our initiatives. Our club membership has quadrupled since last semester, and we’ve ambitiously planned community-wide joint workshops with other martial art clubs, new annual showcases featuring CU and non-CU performing arts teams, and so much more. This is all in the hopes of sharing the practice and values of Columbia Wushu with as many people as possible.
-
-Your support would directly go towards:
-* Helping provide gear to everybody, like shoes, silks, weapons.
-* Keeping events accessible by minimizing registration, travel, and rooming fees passed onto students.
-* Sustaining our club’s operational events, community programming and social activities.
-
-Every contribution, no matter the size, directly supports Columbia’s and New York’s Wushu community. If you’d like to help us keep growing, you can donate directly through venmo (@wangyichen).
-
-Thank you for believing in our movement, and we hope to see you at future CU Wushu events!
-
-Warm regards,
-The Columbia Wushu Team
-columbiawushu@gmail.com | columbiawushu.org | IG: @columbiawushu
 """
 
 # ----------------------------------------------------------------------
