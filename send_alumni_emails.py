@@ -9,7 +9,7 @@ import time
 from dataclasses import dataclass
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from typing import Iterable, List, Tuple
+from typing import List
 
 try:
     from dotenv import load_dotenv
@@ -82,7 +82,7 @@ def parse_contacts(text: str) -> List[Contact]:
                 inferred = local.replace(".", " ").replace("_", " ").title()
                 contacts.append(Contact(display_name=inferred, email=email_candidate))
             else:
-                print(f"⚠️  Skipping unrecognized entry: {raw}")
+                print(f"Skipping unrecognized entry: {raw}")
     return contacts
 
 
@@ -160,18 +160,17 @@ def main():
                     body=body,
                     from_name=args.from_name,
                 )
-                print(f"✅ Sent to {c.display_name} <{c.email}>")
+                print(f"Sent to {c.display_name} <{c.email}>")
                 sent += 1
             except smtplib.SMTPAuthenticationError as e:
-                print("❌ Authentication failed. If you use 2‑Step Verification, you must use an App Password.")
+                print("Authentication failed.")
                 raise
             except Exception as e:
-                print(f"⚠️  Failed to send to {c.display_name} <{c.email}>: {e}")
+                print(f"Failed to send to {c.display_name} <{c.email}>: {e}")
 
-            # Polite delay
             time.sleep(max(0.0, args.delay) + random.uniform(0.0, 0.75))
 
-    print(f"Done. Successfully processed {sent}/{len(contacts)} contacts.")
+    print(f"Done.")
 
 if __name__ == "__main__":
     main()
